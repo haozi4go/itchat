@@ -9,7 +9,7 @@ pipeline {
         timeout(time: 2, unit: 'MINUTES') 
       }
       steps {
-        sh "python ~/apps/docs/jenkins/workspace/itchat/itchat-send.py ${send_msg} "
+        sh "python ~/apps/docs/jenkins/workspace/itchat/itchat-send.py '${send_msg}' "
         echo "Send success."
       }
     }
